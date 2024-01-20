@@ -1,0 +1,13 @@
+.courses {
+    margin-top: 4rem;
+    margin-bottom:  4rem;
+}
+
+.footer {
+    background: var(--color-bg1);
+    box-shadow: 0rem -2rem 3rem 2rem var(--color-bg1);
+    padding-top: 0;
+    position: relative;
+    margin-top: 2rem;
+    box-sizing: border-box;
+}

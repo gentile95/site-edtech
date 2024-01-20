@@ -1,0 +1,256 @@
+/* ATCHIEVEMENTS */
+
+.about {
+    margin-top: 3rem;
+    padding-bottom: 6rem;
+    margin-bottom: 6rem;
+}
+
+.about_container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 5rem;
+    width: var(--container-width-lg);
+    padding-bottom: 3rem;
+}
+
+.about_left img {
+    height: 500;
+}
+
+.about_right {
+    box-sizing: border-box;
+    max-width: 90%;
+    display: flexbox;
+    margin-top: 1.5rem;
+    max-height: 100%;
+    align-items: center;
+    align-self: center;
+    gap: 5rem;
+
+}
+
+.about_right > p {
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--color-bg1);
+    gap: 1.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.card h3 {
+    margin: 1.5rem 0 0rem;
+}
+
+.about_icon {
+    background-color: var(--color-danger);
+    font-size: 2rem;
+    border-radius: 1rem;
+    display: inline-block;
+    padding: 0.6rem;
+    margin-top: 0.7rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.card:nth-child(2) .about_icon {
+    background-color: var(--color-sucess);
+}
+
+.card:nth-child(3) .about_icon {
+    background-color: var(--color-primary);
+}
+
+.card:hover {
+    box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+    background-color: var(--color-bg-2);
+}
+
+
+
+/* TEAM */
+
+
+.team {
+    background-color: var(--color-bg1);
+    box-shadow: 0 -2rem 3rem 2rem var(--color-bg1);
+    padding-top: 0;
+}
+
+.team_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+    column-gap: 3rem;
+    padding-bottom: 2rem;
+}
+
+.team_member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-bg-2);
+    padding: 2rem 0 2rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.team_member-image > img {
+    width: 70%;
+    height: auto;
+    filter: saturate(0);
+    transition: var(--transition);
+}
+
+.team_member-image {
+    display: flex;
+    justify-content: center;
+}
+
+.team_member-info {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.team_member-info p {
+    color: var(--color-light);
+}
+
+.team_member:hover {
+    background-color: transparent;
+    border-color: var(--color-primary);
+}
+
+.team_member:hover img {
+    filter: saturate(1);
+}
+
+.team_member-socials {
+    position: absolute;
+    right: -100%;
+    top: 50%;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    padding: 0.8rem 0.3rem 0.8rem 0.8rem;
+    z-index: 4;
+    transition: var(--transition);
+}
+
+.team_member:hover .team_member-socials {
+    right: 0;
+}
+
+.uil {
+    font-size: 120%;
+}
+
+
+/* ================= FOOTER ================ */
+
+
+.footer {
+    background: var(--color-bg);
+    box-shadow: 0rem -2rem 3rem 2rem var(--color-bg);
+    padding-top: 0;
+}
+
+
+
+/* =========== MEDIA QUERIES ============ */
+
+
+@media screen and (max-width: 1024px) {
+    
+    .about {
+        margin-top: 2rem;
+    }
+
+    .container {
+        width: var(--container-width-md);
+    }
+
+    .about_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about_left {
+        width: 70%;
+        margin: 0 auto 0;
+    }
+
+    .team_container {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 2rem;
+    }
+
+}
+
+
+/* SMARTPHONE */
+
+
+@media screen and (max-width: 600px) {
+
+    .container{
+        width: var(--container-width-sm);
+    }
+    
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card > p {
+        display: flex;
+        justify-content: center;
+    }
+
+    .card > h3 {
+        font-size: 100%;
+    }
+
+    .about {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .about h1 {
+        text-align: center;
+    }
+
+    .team_container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+
+    .about_right {
+        margin: 1.5rem auto 0;
+    }
+
+    .about_right p {
+        text-align: justify;
+    }
+
+  
+}
