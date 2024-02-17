@@ -8,3 +8,6 @@ As páginas são:
 - About: informações sobre os "professores"
 - Courses: lista dos cursos
 - Contact: formulário para contato, 100% funcional
+
+<h3>Clique aqui para visualizar o site!</h3>
+https://gentile95.github.io/site-edtech/
